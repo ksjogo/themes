@@ -129,7 +129,7 @@
 											<f:form.hidden name="check[{item.name}]" value="{f:if(condition:'{item.isDefault}', then:'', else:'checked')}" class="hidden"/>
 										</td>
 										<td class="title">
-											  <label for="{item.name}"><f:format.htmlSpecialChars><f:translate key="{item.label}" default="{item.label}"/></f:format.htmlSpecialChars></label>
+                        <label for="{item.name}"><f:format.htmlspecialchars><f:translate key="{item.label}" default="{item.label}"/></f:format.htmlSpecialChars></label>
 										</td>
 										<td class="value">
 											  <f:render partial="FormFields/{item.typeCleaned}" arguments="{field: item}"/>
