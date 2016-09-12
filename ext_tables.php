@@ -40,21 +40,21 @@ if (TYPO3_MODE === 'BE') {
 /*
  * add themes overlay
  */
-    array_push($GLOBALS['TBE_STYLES']['spriteIconApi']['spriteIconRecordOverlayPriorities'], 'themefound');
-    $GLOBALS['TBE_STYLES']['spriteIconApi']['spriteIconRecordOverlayNames']['themefound'] = 'extensions-themes-overlay-theme';
+// array_push($GLOBALS['TBE_STYLES']['spriteIconApi']['spriteIconRecordOverlayPriorities'], 'themefound');
+// $GLOBALS['TBE_STYLES']['spriteIconApi']['spriteIconRecordOverlayNames']['themefound'] = 'extensions-themes-overlay-theme';
 
 /*
  * add sprites
-    \TYPO3\CMS\Backend\Sprite\SpriteManager::addSingleIcons(
-        array(
-            //'switch-off' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath($_EXTKEY) . 'Resources/Public/Icons/power_orange.png',
-            'switch-disable' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath($_EXTKEY) . 'Resources/Public/Icons/power_grey.png',
-            'switch-on' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath($_EXTKEY) . 'Resources/Public/Icons/power_green.png',
-            'contains-theme' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath($_EXTKEY) . 'ext_icon.png',
-        ),
-        $_EXTKEY
-    );
- */
+ \TYPO3\CMS\Backend\Sprite\SpriteManager::addSingleIcons(
+ array(
+ //'switch-off' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath($_EXTKEY) . 'Resources/Public/Icons/power_orange.png',
+ 'switch-disable' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath($_EXTKEY) . 'Resources/Public/Icons/power_grey.png',
+ 'switch-on' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath($_EXTKEY) . 'Resources/Public/Icons/power_green.png',
+ 'contains-theme' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath($_EXTKEY) . 'ext_icon.png',
+ ),
+ $_EXTKEY
+ );
+*/
 
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::allowTableOnStandardPages('tx_themes_buttoncontent');
 
@@ -120,10 +120,10 @@ $iconRegistry->registerIcon(
 );
 
 $GLOBALS['TCA']['pages']['columns']['module']['config']['items'][] =
-        [
-                0 => 'LLL:EXT:themes/Resources/Private/Language/locallang.xlf:contains-theme',
-                1 => 'themes',
-                2 => 'extensions-themes-contains-theme',
-        ];
+                                                                   [
+                                                                       0 => 'LLL:EXT:themes/Resources/Private/Language/locallang.xlf:contains-theme',
+                                                                       1 => 'themes',
+                                                                       2 => 'extensions-themes-contains-theme',
+                                                                   ];
 
 $GLOBALS['TCA']['pages']['ctrl']['typeicon_classes']['contains-themes'] = 'extensions-themes-contains-theme';
