@@ -39,9 +39,9 @@ if (TYPO3_MODE === 'BE') {
 
 /*
  * add themes overlay
- */
     array_push($GLOBALS['TBE_STYLES']['spriteIconApi']['spriteIconRecordOverlayPriorities'], 'themefound');
     $GLOBALS['TBE_STYLES']['spriteIconApi']['spriteIconRecordOverlayNames']['themefound'] = 'extensions-themes-overlay-theme';
+*/
 
 /*
  * add sprites
